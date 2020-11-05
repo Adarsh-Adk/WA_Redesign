@@ -7,29 +7,31 @@ var cardElevation= Constants().cardElevation;
 var cardContHt= Constants().cardContHt;
 var cardRadius= Constants().cardRadius;
 var pageContHt= Constants().pageContHt;
+var dpSize=Constants().dpSize;
 
 class PersonalPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(height: pageContHt,
-      color: Colors.white,
+      color: Colors.grey[100],
       child: ListView(
         children: [
           Container(height: 5,),
           StatusView(),
-          Container(height: 3,),
-          Card(elevation: cardElevation,
+          Container(height: 1,),
+          Card(
+            elevation: cardElevation,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(cardRadius))),
             child:
             Container(height: cardContHt,
               child: Center(
                 child: ListTile(
                   leading:ClipRRect(
-                    borderRadius: BorderRadius.circular(70),
+                    borderRadius: BorderRadius.circular(dpSize),
                     child: Image(
                       image: NetworkImage( "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",),
-                      width:65,
-                      height:65,
+                      width:dpSize,
+                      height:dpSize,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -46,12 +48,12 @@ class PersonalPage extends StatelessWidget {
               child: Center(
                 child: ListTile(
                   leading:ClipRRect(
-                    borderRadius: BorderRadius.circular(65),
+                    borderRadius: BorderRadius.circular(dpSize),
                     child: Image(
                       image: NetworkImage("https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                       ),
-                      width: 65,
-                      height: 65,
+                      width: dpSize,
+                      height: dpSize,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -68,12 +70,12 @@ class PersonalPage extends StatelessWidget {
               child: Center(
                 child: ListTile(
                   leading:ClipRRect(
-                    borderRadius: BorderRadius.circular(65),
+                    borderRadius: BorderRadius.circular(dpSize),
                     child: Image(
                       image: NetworkImage(  "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                       ),
-                      width: 65,
-                      height: 65,
+                      width: dpSize,
+                      height: dpSize,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -90,12 +92,12 @@ class PersonalPage extends StatelessWidget {
               child: Center(
                 child: ListTile(
                   leading:ClipRRect(
-                    borderRadius: BorderRadius.circular(65),
+                    borderRadius: BorderRadius.circular(dpSize),
                     child: Image(
                       image: NetworkImage( "https://images.pexels.com/photos/1124724/pexels-photo-1124724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                       ),
-                      width: 65,
-                      height: 65,
+                      width: dpSize,
+                      height:dpSize,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -111,12 +113,12 @@ class PersonalPage extends StatelessWidget {
             child: Center(
               child: ListTile(
                 leading:ClipRRect(
-                  borderRadius: BorderRadius.circular(65),
+                  borderRadius: BorderRadius.circular(dpSize),
                   child: Image(
                     image: NetworkImage(  "https://images.pexels.com/photos/1845534/pexels-photo-1845534.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                     ),
-                    width: 65,
-                    height: 65,
+                    width: dpSize,
+                    height: dpSize,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -131,12 +133,12 @@ class PersonalPage extends StatelessWidget {
             child: Center(
               child: ListTile(
                 leading:ClipRRect(
-                  borderRadius: BorderRadius.circular(65),
+                  borderRadius: BorderRadius.circular(dpSize),
                   child: Image(
                     image: NetworkImage(  "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                     ),
-                    width: 65,
-                    height: 65,
+                    width: dpSize,
+                    height: dpSize,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -153,12 +155,12 @@ class PersonalPage extends StatelessWidget {
               child: Center(
                 child: ListTile(
                   leading:ClipRRect(
-                    borderRadius: BorderRadius.circular(65),
+                    borderRadius: BorderRadius.circular(dpSize),
                     child: Image(
                       image: NetworkImage(  "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                       ),
-                      width: 65,
-                      height: 65,
+                      width: dpSize,
+                      height: dpSize,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -173,12 +175,12 @@ class PersonalPage extends StatelessWidget {
             child: Center(
               child: ListTile(
                 leading:ClipRRect(
-                  borderRadius: BorderRadius.circular(65),
+                  borderRadius: BorderRadius.circular(dpSize),
                   child: Image(
                     image: NetworkImage( "https://images.pexels.com/photos/573299/pexels-photo-573299.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                     ),
-                    width: 65,
-                    height: 65,
+                    width: dpSize,
+                    height: dpSize,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -192,12 +194,12 @@ class PersonalPage extends StatelessWidget {
             child: Center(
               child: ListTile(
                 leading:ClipRRect(
-                  borderRadius: BorderRadius.circular(65),
+                  borderRadius: BorderRadius.circular(dpSize),
                   child: Image(
                     image: NetworkImage(  "https://images.pexels.com/photos/756453/pexels-photo-756453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                     ),
-                    width: 65,
-                    height: 65,
+                    width: dpSize,
+                    height: dpSize,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -211,12 +213,12 @@ class PersonalPage extends StatelessWidget {
             child: Center(
               child: ListTile(
                 leading:ClipRRect(
-                  borderRadius: BorderRadius.circular(65),
+                  borderRadius: BorderRadius.circular(dpSize),
                   child: Image(
                     image: NetworkImage( "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                     ),
-                    width: 65,
-                    height: 65,
+                    width: dpSize,
+                    height: dpSize,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -230,12 +232,12 @@ class PersonalPage extends StatelessWidget {
             child: Center(
               child: ListTile(
                 leading:ClipRRect(
-                  borderRadius: BorderRadius.circular(65),
+                  borderRadius: BorderRadius.circular(dpSize),
                   child: Image(
                     image: NetworkImage( "https://images.pexels.com/photos/1832959/pexels-photo-1832959.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                     ),
-                    width: 65,
-                    height: 65,
+                    width: dpSize,
+                    height: dpSize,
                     fit: BoxFit.cover,
                   ),
                 ),

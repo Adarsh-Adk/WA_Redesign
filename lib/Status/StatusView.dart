@@ -54,10 +54,11 @@ class StatusView extends StatelessWidget {
               children: <Widget>[
                 Container(
                   margin: EdgeInsets.symmetric(
-                    horizontal: 3,
+                    vertical: 5,
+                    horizontal: 7,
                   ),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(65),
+                    borderRadius: BorderRadius.circular(55),
                     border: Border.all(
                       width: 3,
                       color: deGreen,
@@ -68,11 +69,11 @@ class StatusView extends StatelessWidget {
                       2,
                     ),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(65),
+                      borderRadius: BorderRadius.circular(55),
                       child: Image(
                         image: NetworkImage(status.image),
-                        width: 65,
-                        height: 65,
+                        width: 55,
+                        height: 55,
                         fit: BoxFit.cover,
                       ),
                     ),
