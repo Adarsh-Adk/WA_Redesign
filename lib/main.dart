@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
 import 'package:whatsapp_demo/Calls/CallsPage.dart';
 import 'package:whatsapp_demo/Camera/Camera.dart';
 import 'package:whatsapp_demo/Groups/GroupPage.dart';
@@ -39,13 +40,16 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+        statusBarColor: Colors.green[700]
+    ));
     return MaterialApp(
         theme: ThemeData(primarySwatch: deGreen),
         debugShowCheckedModeBanner: false,
         home: SafeArea(
           child: Scaffold(
             appBar: AppBar(
-              elevation: 7,
+              elevation: 0,
               backgroundColor: Colors.white,
               title: Text(
                 "Whatsapp",
