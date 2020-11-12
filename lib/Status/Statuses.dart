@@ -19,7 +19,7 @@ class Statuses extends StatelessWidget {
       child: StoryView(
         controller: storyController,
         storyItems: [
-          StoryItem.text(title: name, backgroundColor: deGreen),
+          StoryItem.text(title: name,textStyle: TextStyle(decoration: TextDecoration.none,fontSize: 40), backgroundColor: deGreen),
           StoryItem.inlineImage(
               url: image, caption: null, controller: storyController),
         ],
