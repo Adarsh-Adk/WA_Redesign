@@ -2,85 +2,39 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:story_view/controller/story_controller.dart';
 import 'package:story_view/story_view.dart';
-import 'Status.dart';
+import 'package:whatsapp_demo/main.dart';
 
-class Statuses extends StatefulWidget {
-  @override
-  _StatusesState createState() => _StatusesState();
-}
+class Statuses extends StatelessWidget {
+  String image;
+  String name;
+  int index;
+  int length;
 
-class _StatusesState extends State<Statuses> {
-  final StoryController storyController = StoryController();
+  Statuses(this.image, this.name, this.length, this.index);
 
-  final List<Status> _status = [
-    Status(
-        "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "Jazmin"),
-    Status(
-        "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "Sylvester"),
-    Status(
-        "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "Lavina"),
-    Status(
-        "https://images.pexels.com/photos/1124724/pexels-photo-1124724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "Mckenzie"),
-    Status(
-        "https://images.pexels.com/photos/1845534/pexels-photo-1845534.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "Buster"),
-    Status(
-        "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "Carlie"),
-    Status(
-        "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "Edison"),
-    Status(
-        "https://images.pexels.com/photos/573299/pexels-photo-573299.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "Flossie"),
-    Status(
-        "https://images.pexels.com/photos/756453/pexels-photo-756453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "Lindsey"),
-    Status(
-        "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "Freddy"),
-    Status(
-        "https://images.pexels.com/photos/1832959/pexels-photo-1832959.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "Litzy")
-  ];
+  StoryController storyController = StoryController();
 
-  @override
   Widget build(BuildContext context) {
     return Container(
       child: StoryView(
         controller: storyController,
         storyItems: [
+          StoryItem.text(title: name, backgroundColor: deGreen),
           StoryItem.inlineImage(
-              url:
-                  "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-              caption: null,
-              controller: storyController),
-          StoryItem.inlineImage(
-              url:
-                  "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-              caption: null,
-              controller: storyController),
-          StoryItem.inlineImage(
-              url:
-                  "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-              caption: null,
-              controller: storyController),
-          StoryItem.inlineImage(
-              url:
-                  "https://images.pexels.com/photos/1124724/pexels-photo-1124724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-              caption: null,
-              controller: storyController),
-          StoryItem.inlineImage(
-              url:"https://images.pexels.com/photos/1832959/pexels-photo-1832959.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-              caption: null,
-              controller: storyController),
+              url: image, caption: null, controller: storyController),
         ],
+        onVerticalSwipeComplete: (direction) {
+          if (direction == Direction.down) {
+            Navigator.pop(context);
+          }
+        },
         onComplete: () {
-          Navigator.pop(context);
+          if ((index + 1) < length) {
+            print("index:$index,length:$length");
+            Navigator.pop(context);
+          } else {
+            Navigator.pop(context);
+          }
         },
       ),
     );

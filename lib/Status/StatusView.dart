@@ -53,7 +53,7 @@ class StatusView extends StatelessWidget {
           shrinkWrap: true,
           children: _status.map((status) {
             return InkWell(
-              onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Statuses()));},
+              onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Statuses(status.image,status.name,_status.length,_status.indexOf(status))));},
               child: Column(
                 children: <Widget>[
                   Container(
